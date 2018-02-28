@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import './App.css';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import './App.scss';
 
 import AlbumList from './Components/AlbumList';
 import Navigation from './Components/Navigation';
@@ -27,8 +27,8 @@ class App extends Component {
               <Navigation>
                   <div className="App">
                       <Route exact path="/" component={HomePage} />
-                      <Route exact path={'/albums'} component={AlbumPage}/>
-                      <Route path={`album/:name`} component={AlbumList} />
+                      <Route path={'/genre/:genreName/albums'} component={AlbumList}/>
+                      <Route path={`/artist/:artistName/albums`} component={AlbumList} />
                       <Route path={'/not-Found'} conponent={NoMatch} />
                   </div>
               </Navigation>

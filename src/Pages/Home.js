@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../Components/Header';
+import ArtistList from '../Components/ArtistList';
 
 class HomePage extends Component {
 
@@ -9,7 +10,8 @@ class HomePage extends Component {
 
         return (
             <div className="App">
-                <Header title={'Tervetuloa soundi appiin!'}/>
+                <Header title={'Top artists'}/>
+                <ArtistList/>
             </div>
         );
     }

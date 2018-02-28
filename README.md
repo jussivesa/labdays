@@ -1,5 +1,12 @@
 # lapdays
 
+## links
+- http://madewithreact.com/soundcloud-app/
+- http://madewithreact.com/content/images/2016/09/react-soundcloud-app.png
+- https://react-md.mlaursen.com/customization/themes
+- https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#post-processing-css
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>

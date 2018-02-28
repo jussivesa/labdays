@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button, NavigationDrawer} from 'react-md';
+import {Button, FontIcon, NavigationDrawer} from 'react-md';
 import MaterialIcon, {colorPallet} from 'material-icons-react';
 import { Link } from "react-router-dom";
 
@@ -30,14 +30,17 @@ class Navigation extends Component {
 
         const navItemsObj = [
             {key: 0, primaryText: 'Home', route: '/', icon:  'home'},
-            {key: 1, primaryText: 'Albums', route: '/albums', icon: 'view_stream' }
+            {key: 2, primaryText: 'Top Rock Albums', route: '/genre/rock/albums', icon: 'library_music' },
+            {key: 3, primaryText: 'Top Disco Albums', route: '/genre/disco/albums', icon: 'library_music' },
         ];
 
         const navItems = navItemsObj.map((item) => {
             return (
-                <Link key={item.key} to={item.route}>
-                    <Button  flat primary onClick={() => this.setPage(item.key, item.primaryText, item.route)}>
-                        <MaterialIcon icon={item.icon} />
+                <Link key={item.key} to={item.route} className={'nav-link'}>
+                    <Button icon primary onClick={() => this.setPage(item.key, item.primaryText, item.route)}>
+                        <div style={{color: 'hotpink'}}>
+                            <FontIcon secondary>{item.icon} </FontIcon>
+                        </div>
                     </Button>
                     {item.primaryText}
                 </Link>
@@ -47,12 +50,13 @@ class Navigation extends Component {
         return (
             <div>
                 <NavigationDrawer
+                    className={'main-nav'}
                     navItems={navItems}
                     mobileDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY_MINI}
                     tabletDrawerType={NavigationDrawer.DrawerTypes.PERSISTENT_MINI}
                     desktopDrawerType={NavigationDrawer.DrawerTypes.PERSISTENT_MINI}
-                    toolbarTitle="Hieno navigointi"
-                    temporaryIcon={<MaterialIcon icon='menu'/>}
+                    toolbarTitle="SoundiApp2018"
+                    temporaryIcon={<FontIcon secondary>menu</FontIcon>}
                     persistentIcon={<MaterialIcon icon ='arrow_back'/>}
                     contentClassName="md-grid">
 

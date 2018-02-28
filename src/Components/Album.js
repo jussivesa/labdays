@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Button, Card, CardText, CardTitle, Media, MediaOverlay} from 'react-md';
+import {Button, Card, CardText, CardTitle, Cell, Media, MediaOverlay} from 'react-md';
 
 
 class Album extends Component {
@@ -25,27 +25,23 @@ class Album extends Component {
 
         const {likes} = this.state;
         const { album } = this.props;
-        const { name, artist, year, imgUrl} = this.props;
+        const { name, artist, playCount, imgUrl} = this.props;
 
         return (
-            <div>
-                <Card className="cards__example md-cell md-cell--6 md-cell--8-tablet">
+            <Cell size={3}>
+                <Card className={'album-card'}>
                     <Media>
-                        <img src={imgUrl} alt="Nature from lorempixel" />
-                        <MediaOverlay>
-                            <CardTitle title={name} subtitle={`${artist} - ${year} `}>
-                                <Button onClick={this.love.bind(this, name)} className="md-cell--right" icon>favorite</Button>Love ({likes})
-                            </CardTitle>
-                        </MediaOverlay>
+                        <img src={imgUrl} alt="Album art" />
+
                     </Media>
-                    <CardText>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut eleifend odio.
-                            Vivamus quis quam eget augue facilisis laoreet. Aliquam egestas turpis pellentesque
-                        </p>
+                    <CardText className={'album-card-text'}>
+                        <CardTitle className={'album-card-title'} title={name ? `${name.substring(0, 50)}...` : null} subtitle={`${artist} - Played ${playCount} times`}>
+                            <Button flat primary onClick={this.love.bind(this, name)}
+                                    className="md-cell--right" iconChildren="favorite" style={{color: 'hotpink'}}>{likes}</Button>
+                        </CardTitle>
                     </CardText>
                 </Card>
-            </div>
+            </Cell>
         );
     }
 }
