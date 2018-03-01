@@ -1,6 +1,12 @@
 # labdays
 
-## links
+## Get started
+
+- Clone this repo e.g. `git clone https://github.com/jussivesa/labdays.git && cd labdays`. 
+- Run `npm install` and open http://localhost:3000 to see it live.
+- Dev 😎
+
+## Links and resources
 - http://madewithreact.com/soundcloud-app/
 - http://madewithreact.com/content/images/2016/09/react-soundcloud-app.png
 - https://react-md.mlaursen.com/customization/themes
