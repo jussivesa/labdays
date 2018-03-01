@@ -2,7 +2,7 @@
 
 ## Get started
 
-- Clone this repo e.g. `git clone https://github.com/jussivesa/labdays.git && cd labdays`. 
+- Clone this repo e.g. `git clone https://github.com/jussivesa/labdays.git && cd labdays/soundi-app`.
 - Run `npm install` and open http://localhost:3000 to see it live.
 - Dev 😎
 
