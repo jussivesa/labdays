@@ -1,4 +1,4 @@
-# lapdays
+# labdays
 
 ## links
 - http://madewithreact.com/soundcloud-app/
