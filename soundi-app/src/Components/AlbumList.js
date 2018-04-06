@@ -8,7 +8,6 @@ class AlbumList extends Component {
 
     constructor(props) {
         super(props);
-        console.log(props);
 
         this.state = {
             data: [],
@@ -20,6 +19,7 @@ class AlbumList extends Component {
 
     componentWillMount() {
         console.log('componentWill mount');
+        console.log(this.props);
         this.getData();
     }
 
@@ -55,7 +55,6 @@ class AlbumList extends Component {
         const that = this;
         axios.get(url)
             .then(function (response) {
-                console.log(response);
                 that.setState({
                     data: response
                 });
@@ -67,7 +66,6 @@ class AlbumList extends Component {
     }
 
     render() {
-        // .replace(' ', '-').toLowerCase()
 
         const {data, isGenre} = this.state;
         let albumsArr = [];
@@ -77,7 +75,6 @@ class AlbumList extends Component {
                 const albumsData = data.data.topalbums.album;
 
                 albumsData.map(album => {
-                    console.log(album)
                     albumsArr.push({
                         name: album.name ? album.name : 'Album name unavailable',
                         artist: album.artist.name ? album.artist.name : 'Artist name unavailable',
@@ -89,7 +86,6 @@ class AlbumList extends Component {
                 const albumsData = data.data.albums.album;
 
                 albumsData.map(album => {
-                    console.log(album)
                     albumsArr.push({
                         name: album.name ? album.name : 'Album name unavailable',
                         artist: album.artist.name ? album.artist.name : 'Artist name unavailable',
@@ -99,8 +95,6 @@ class AlbumList extends Component {
                 });
             }
         }
-
-        console.log(this.props);
 
         return (
             <Grid>
@@ -114,7 +108,8 @@ class AlbumList extends Component {
                         }
                         return (
                             <Album key={album.name + i} name={album.name}
-                                   artist={album.artist} playCount={album.playCount} imgUrl={album.imgUrl}>
+                                   artist={album.artist} playCount={album.playCount} imgUrl={album.imgUrl} user={this.props.user}>
+
                             </Album>
                         )
                     })

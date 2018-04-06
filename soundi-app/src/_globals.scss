@@ -46,6 +46,7 @@ ul.md-toolbar-relative {
 
 .album-card-text {
   min-height: 220px;
+  padding: 0 !important;
 }
 
 .artist-chip-container {
@@ -65,4 +66,41 @@ ul.md-toolbar-relative {
   span {
     text-decoration: none !important;
   }
+}
+
+
+// firebase stuff
+
+.firebaseui-id-submit {
+  height: 32px;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 13px;
+  color: #fff;
+  border-radius: 2px;
+  font-weight: 500;
+  min-width: 88px;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  background: transparent;
+  border: 0;
+  position: relative;
+  transition-duration: 0.15s;
+  transition-property: background, color;
+  display: inline-block;
+  vertical-align: bottom;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+.mdl-textfield__label {
+  color: hotpink;
+  font-size: 13px;
+  padding: 0 10px 0 25px;
+
+}
+.logout {
+  margin-top: 15px !important;
+  padding-left: 10px !important;
 }

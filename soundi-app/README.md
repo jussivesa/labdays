@@ -3,8 +3,19 @@
 ## Get started
 
 - Clone this repo e.g. `git clone https://github.com/jussivesa/labdays.git && cd labdays/soundi-app`.
+- Add Firebase auth details to `/src/config/secter.json`
+  - Example `
+    {
+      "apiKey": "xxx",
+      "authDomain": "some.app.firebaseapp.com",
+      "databaseURL": "https://some.app.firebaseio.com",
+      "projectId": "some-app-xxx",
+      "storageBucket": "xxx.appspot.com",
+      "messagingSenderId": "xxx"
+    }
+  `
 - Run `npm install` and open http://localhost:3000 to see it live.
-- Dev 😎
+- `npm start` and Dev 😎
 
 ## Links and resources
 - http://madewithreact.com/soundcloud-app/

@@ -1,5 +1,8 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
+# secrets
+/src/config/*.json
+
 # using sass / scss, we dont want the written files to git, only the sources (scss, sass).
 /src/**/*.css
 /src/*.css

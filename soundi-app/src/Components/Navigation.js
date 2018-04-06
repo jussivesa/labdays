@@ -26,10 +26,10 @@ class Navigation extends Component {
 
     render() {
 
-
-
+console.log(this.props);
         const navItemsObj = [
             {key: 0, primaryText: 'Home', route: '/', icon:  'home'},
+            {key: 1, primaryText: 'Login', route: '/login', icon:  'account_circle'},
             {key: 2, primaryText: 'Top Rock Albums', route: '/genre/rock/albums', icon: 'library_music' },
             {key: 3, primaryText: 'Top Disco Albums', route: '/genre/disco/albums', icon: 'library_music' },
         ];
@@ -55,7 +55,7 @@ class Navigation extends Component {
                     mobileDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY_MINI}
                     tabletDrawerType={NavigationDrawer.DrawerTypes.PERSISTENT_MINI}
                     desktopDrawerType={NavigationDrawer.DrawerTypes.PERSISTENT_MINI}
-                    toolbarTitle="SoundiApp2018"
+                    toolbarTitle={`SoundiApp2018 signed user:  ${this.props.user ? this.props.user.email : 'no user signed in'} `}
                     temporaryIcon={<FontIcon secondary>menu</FontIcon>}
                     persistentIcon={<MaterialIcon icon ='arrow_back'/>}
                     contentClassName="md-grid">
