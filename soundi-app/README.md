@@ -3,7 +3,7 @@
 ## Get started
 
 - Clone this repo e.g. `git clone https://github.com/jussivesa/labdays.git && cd labdays/soundi-app`.
-- Add Firebase auth details to `/src/config/secter.json`
+- Add Firebase auth details to `/src/config/secret.json`
   - Example `
     {
       "apiKey": "xxx",
