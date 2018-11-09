@@ -1,5 +1,5 @@
 # First stage of multi-stage build
-FROM node:boron
+FROM node:11-alpine
 WORKDIR /app
 
 # copy the contents of agent working directory on host to workdir in container
@@ -9,7 +9,7 @@ COPY . .
 RUN npm install
 
 # Second stage - Build runtime image
-FROM node:boron
+FROM node:11-alpine
 WORKDIR /app
 COPY . .
 RUN npm install
