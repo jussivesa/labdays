@@ -19,6 +19,7 @@ steps:
   displayName: 'cd to app folder'
 
 - script: |
+    cd ./cra-devops-test
     npm install
     npm run build
   displayName: 'npm install and build'
