@@ -13,7 +13,9 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
+    ls
     cd ./cra-devops-test
+    ls
   displayName: 'cd to app folder'
 
 - script: |
