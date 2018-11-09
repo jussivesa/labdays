@@ -1,3 +1,5 @@
+RUN whoami
+
 # First stage of multi-stage build
 FROM node:11-alpine
 WORKDIR /app
